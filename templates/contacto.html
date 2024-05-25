@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - La Estancia</title>
+</head>
+<body>
+    
+    <!-- Encabezado -->
+    <header class="header">
+
+        <nav>
+            <!-- Logo -->
+            <div id="logo">
+                <a href="/">
+                    
+                    <span class="logo-text">La estancia</span>
+                </a>
+            </div>
+
+            <!-- hipervínculos del menú -->
+            <ul class="nav-links">
+                <li><a href="./templates/list-pizza.html" class="btn-cac"</a>Menú</a></li>
+                <li><a href="#" class="btn-cac">Pedidos</a></li>
+                <li>
+                    <a href="./templates/contacto.html" class="btn-cac">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Contenido -->
+    <main>
+
+        <!-- form-wrapper: formulario -->
+        <section id="form-wrapper">
+            <form action="#" id="formRegister" method="GET" novalidate>
+                <div class="form-control">
+                    <label>Nombre</label>
+                    <input type="text" required name="firstname" id="firstname">
+                </div>
+                <div class="error" id="error-firstname"></div>
+                <div class="form-control">
+                    <label>Apellido</label>
+                    <input type="text" required name="lastname" id="lastname">
+                </div>
+                <div class="error" id="error-lastname"></div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" required name="email" id="email">
+                </div>
+                <div class="error" id="error-email"></div>
+               
+             
+                <div class="form-terms">
+                    <div class="terms">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">Acepto términos y condiciones</label>
+                    </div>
+                </div>
+                <button type="submit">Registrarse</button>
+                <div class="form-help">
+                    <a href="#">Necesitas ayuda?</a>
+                </div>
+            </form>
+        </section>
+
+    </main>
+    
+    <!-- Pie de página -->
+    <footer id="footer">
+        <a href="">Términos y condiciones</a>
+        <a href="">Nosotros</a>
+    </footer>
+    
+</body>
+</html>

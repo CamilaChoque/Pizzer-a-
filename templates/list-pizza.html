@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas</title>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+
+        <nav>
+            <!-- Logo -->
+            <div id="logo">
+                <a href="/">
+                    
+                    <span class="logo-text">La estancia</span>
+                </a>
+            </div>
+
+            <!-- hipervínculos del menú -->
+            <ul class="nav-links">
+                <li><a href="./templates/list-pizza.html" class="btn-cac"</a>Menú</a></li>
+                <li><a href="#" class="btn-cac">Pedidos</a></li>
+                <li>
+                    <a href="./templates/contacto.html" class="btn-cac">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <section id="form">
+            <!-- División contenedora -->
+            <div>
+                <!-- Busqueda de pizza -->
+                <div>
+                    <label for="">Nombre de la Pizza</label>
+                    <input type="text" class="input-search" name="title" id="title">
+                </div>
+
+                <!-- Selección de precio-->
+                <div>
+                    <label for="">Precio</label>
+                    <select name="precio" id="precio" class="form-select">
+                        <option value="">--Seleccione--</option>
+                        <option value="Precio-Bajo">$2000</option>
+                        <option value="Precio-Medio">$5000</option>
+                        <option value="Precio-Alto">$10000</option>
+                    </select>
+                </div>
+                <button></button>
+            </div>
+
+        </section>
+
+        <section id="list">
+            <h2 >Tipos de Pizzas</h2>
+            <table id="list-table-pizzas" >
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Precio</th>
+                        <th>Ingredientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <div id="list-div-pizzas"></div>div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="footer">
+        <a href="">Términos y condiciones</a>
+        <a href="">Nosotros</a>
+    </footer>
+    
+</body>
+</html>
