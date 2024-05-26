@@ -98,7 +98,7 @@ encabezado, ancho y z-index -------------------------------------------*/
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 998;
     box-shadow: 0px 20px 25px -30px #B7AC9A;
 }
 
