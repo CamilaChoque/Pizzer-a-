@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Estancia - Productos</title>
+    <link rel="Icon" href="../static/img/favicon.ico" type="image/x-ico">
+
+    <!--Vinculación con CSS-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/pizzas.css">
+    <!--Vinculación favicon-->
+    <link rel="shortcut icon" href="../static/img/pizza-outline.ico" type="image/x-icon">
+
+     <!-- vinculación con google-fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Sancreek&display=swap" rel="stylesheet">
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Danfo&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Sancreek&display=swap" rel="stylesheet">
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+     <!-- vinculación fontawesome -->
+     <script src="https://kit.fontawesome.com/9ecf2606fd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Encabezado-->
+    <header class="header">
+
+    <nav>
+      <!-- Logo -->
+      <div id="logo">
+        <a href="../index.html">
+          <span class="logo-text">La estancia</span>
+        </a>
+      </div>
+
+      <!-- hipervínculos del menú -->
+      <ul class="nav-links">
+        <li><a href="./pizzas.html" class="btn-cac">Menú</a></li>
+        <li id="botonPedidos"><a href="#" class="btn-cac">Pedidos</a></li>
+        <li>
+            <a href="./contacto.html" class="btn-cac">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+    
+    <!--Contenido Principal-->
+    <article class="contenedor-opciones">
+      <!--Titulos del Sitio-->
+      <section id="banner" class="titulos">
+        <h2 class="titulo-principal">Menú</h2>
+        <h2>¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car" href="#">pedido</a> para realizar la compra.</h2>
+        <p>*<i>Todas las pizzas se venden en tamaños medianos y grandes</i></p>
+      </section>
+
+      <!--Contenido Pizzas-->
+      <section class="contenedor-pizzas">
+          <!--Pizza Muzzarella-->
+          <div id="muzzarella" class="carta-pizza">
+            <h3 class="nombre-pizza">Pizza de Muzzarella</h3>
+            <img class="imagen-pizza" src="../static/img/pizza-muzzarella.png" alt="Foto de nuestra pizza de muzzarella">
+            <h4 class="descripcion">Piza tradicional y sencilla con queso muzzarella.</h4>
+            <h4 class="ingredientes-titulo">Ingredientes:</h4>
+            <ul class="ingredientes">
+              <li class="ingredientes-info">Salsa de tomate</li>
+              <li class="ingredientes-info">Queso muzzarella</li>
+            </ul>
+            <div id="preciosMuzzarella" class="contenedor-precios">
+              <h4 class="precios-titulo">Precios:</h4>  
+              <div class="precios">
+                <p class="precios-info">Mediana: $5200</p>
+                <button id="btnMedianaMuzzarella" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaMuzzarella')">Agregar</button>
+                <p class="precios-info">Grande: $6000</p>
+                <button id="btnGrandeMuzzarella" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeMuzzarella')">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Piza Jamón-->
+          <div id="jamon" class="carta-pizza">
+            <h3 class="nombre-pizza">Pizza de Jamón y Queso</h3>
+            <img class="imagen-pizza" src="../static/img/pizza-jamon.png" alt="Foto de nuestra pizza de jamón y muzzarella">
+            <h4 class="descripcion">Pizza clásica de jamón cocido y muzzarella.</h4>
+            <h4 class="ingredientes-titulo">Ingredientes:</h4>
+            <ul class="ingredientes">
+              <li class="ingredientes-info">Queso muzzarella</li>
+              <li class="ingredientes-info">Jamón cocido</li>
+            </ul>
+            <div id="preciosJamon" class="contenedor-precios">
+              <h4 class="precios-titulo">Precios:</h4>  
+              <div class="precios">
+                <p class="precios-info">Mediana: $5200</p>
+                <button id="btnMedianaJamon" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaJamon')">Agregar</button>
+                <p class="precios-info">Grande: $6000</p>
+                <button id="btnGrandeJamon" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeJamon')">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Pizza Fugazzetta-->
+          <div id="fugazzetta" class="carta-pizza">
+            <h3 class="nombre-pizza">Pizza de Fugazzetta</h3>
+            <img class="imagen-pizza" src="../static/img/pizza-fugazzetta.png" alt="Foto de nuestra pizza de fugazzetta">
+            <h4 class="descripcion">Una masa rellena de queso cubierta con capas de cebolla.</h4>
+            <h4 class="ingredientes-titulo">Ingredientes:</h4>
+            <ul class="ingredientes">
+              <li class="ingredientes-info">Cebolla</li>
+              <li class="ingredientes-info">Relleno de queso</li>
+            </ul>
+            <div id="preciosFugazzetta" class="contenedor-precios">
+              <h4 class="precios-titulo">Precios:</h4>  
+              <div class="precios">
+                <p class="precios-info">Mediana: $5200</p>
+                <button id="btnMedianaFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaFugazzetta')">Agregar</button>
+                <p class="precios-info">Grande: $6000</p>
+                <button id="btnGrandeFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeFugazzetta')">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Pizza Napolitana-->
+          <div id="napolitana" class="carta-pizza">
+            <h3 class="nombre-pizza">Pizza Napolitana</h3>
+            <img class="imagen-pizza" src="../static/img/pizza-napolitana.png" alt="Foto de nuestra pizza napolitana">
+            <h4 class="descripcion">Versión de la pizza napolitana adaptada al gusto argentino.</h4>
+            <h4 class="ingredientes-titulo">Ingredientes:</h4>
+            <ul class="ingredientes">
+              <li class="ingredientes-info">Queso muzzarella</li>
+              <li class="ingredientes-info">Rodajas de tomate</li>
+            </ul>
+            <div id="preciosNapolitana" class="contenedor-precios">
+              <h4 class="precios-titulo">Precios:</h4>  
+              <div class="precios">
+                <p class="precios-info">Mediana: $5200</p>
+                <button id="btnMedianaNapolitana" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaNapolitana')">Agregar</button>
+                <p class="precios-info">Grande: $6000</p>
+                <button id="btnGrandeNapolitana" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeNapolitana')">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Pizza Salame-->
+          <div id="salame" class="carta-pizza">
+            <h3 class="nombre-pizza">Pizza de Salame picante</h3>
+            <img class="imagen-pizza" src="../static/img/pizza-salame.png" alt="Foto de nuestra pizza de salame picante">
+            <h4 class="descripcion">Pizza que destaca por su sabor picante y delicioso.</h4>
+            <h4 class="ingredientes-titulo">Ingredientes:</h4>
+            <ul class="ingredientes">
+              <li class="ingredientes-info">Queso muzzarella</li>
+              <li class="ingredientes-info">Salame picante</li>
+            </ul>
+            <div id="preciosSalame" class="contenedor-precios">
+              <h4 class="precios-titulo">Precios:</h4>  
+              <div class="precios">
+                <p class="precios-info">Mediana: $5200</p>
+                <button id="btnMedianaSalame" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaSalame')">Agregar</button>
+                <p class="precios-info">Grande: $6000</p>
+                <button id="btnGrandeSalame" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeSalame')">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Pizza Hawaiana-->
+          <div id="hawaiana" class="carta-pizza">
+            <h3 class="nombre-pizza">Pizza Hawaiana</h3>
+            <img class="imagen-pizza" src="../static/img/pizza-hawaiana.png" alt="Foto de nuestra pizza hawaiana">
+            <h4 class="descripcion">Una combinación de sabores dulces y salados.</h4>
+            <h4 class="ingredientes-titulo">Ingredientes:</h4>
+            <ul class="ingredientes">
+              <li class="ingredientes-info">Jamón cocido</li>
+              <li class="ingredientes-info">Trozos de ananá</li>
+            </ul>
+            <div id="preciosHawaiana" class="contenedor-precios">
+              <h4 class="precios-titulo">Precios:</h4>  
+              <div class="precios">
+                <p class="precios-info">Mediana: $5200</p>
+                <button id="btnMedianaHawaiana" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaHawaiana')">Agregar</button>
+                <p class="precios-info">Grande: $6000</p>
+                <button id="btnGrandeHawaiana" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeHawaiana')">Agregar</button>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <div id="circulo" clasS="circulo"></div>
+    </article>
+
+    <!--Footer-->
+    <footer id="footer">
+      <a href="">Términos y condiciones</a>
+      <a href="">Nosotros</a>
+    </footer>
+
+    <!--Vinculación con JavaScript-->
+    <script src="../static/scripts/pizzas.js"></script>
+  </body>
+</html>
