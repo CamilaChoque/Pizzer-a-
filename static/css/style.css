@@ -28,8 +28,10 @@ a{
 }
 
 h2{
-    color:#FFF;
-    font-size: 2vw;
+    color:#F9F1E6;
+    font-family: 'Poetsen One';
+    background-color: #F97350;
+    
 }
 
 #logo{
@@ -270,17 +272,17 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
     color:#FFF;
     font-size: 4vw;
 }
-.card-banner h2{
+.card-banner h2, .container h2{
     margin-bottom: 20px;
 }
 
 
 
-#popular,#top-rated {
+#popular,#top-rated , #resenias, #promos{
     text-align: center;
 }
 
-#popular h2,#top-rated h2{
+#popular h2,#top-rated h2, #promos h2{
     margin: 30px 0px;
 }
 
