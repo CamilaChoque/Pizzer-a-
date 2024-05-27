@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Estancia - Productos</title>
-    <link rel="Icon" href="../static/img/favicon.ico" type="image/x-ico">
 
     <!--Vinculación con CSS-->
     <link rel="stylesheet" href="../static/css/style.css">
@@ -30,33 +29,29 @@
   <body>
     <!--Encabezado-->
     <header class="header">
+      <nav>
+        <!-- Logo -->
+        <div id="logo">
+          <a href="../index.html">
+            <span class="logo-text">La estancia</span>
+          </a>
+        </div>
 
-    <nav>
-      <!-- Logo -->
-      <div id="logo">
-        <a href="../index.html">
-          <span class="logo-text">La estancia</span>
-        </a>
-      </div>
-
-      <!-- hipervínculos del menú -->
-      <ul class="nav-links">
-        <li><a href="./pizzas.html" class="btn-cac">Menú</a></li>
-        <li id="botonPedidos"><a href="#" class="btn-cac">Pedidos</a></li>
-        <li>
-            <a href="./contacto.html" class="btn-cac">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-
-  </header>
+        <!-- hipervínculos del menú -->
+        <ul class="nav-links">
+          <li><a href="./pizzas.html" class="btn-cac">Menú</a></li>
+          <li><a href="./pedidos.html" class="btn-cac">Pedidos</a></li>
+          <li><a href="./contacto.html" class="btn-cac">Contacto</a></li>
+        </ul>
+      </nav>
+   </header>
     
     <!--Contenido Principal-->
-    <article class="contenedor-opciones">
+    <main class="contenedor-opciones">
       <!--Titulos del Sitio-->
       <section id="banner" class="titulos">
-        <h2 class="titulo-principal">Menú</h2>
-        <h2>¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car" href="#">pedido</a> para realizar la compra.</h2>
+        <h1 class="titulo-principal">Menú</h1>
+        <h2>¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car" href="./pedidos.html">pedido</a> para realizar la compra.</h2>
         <p>*<i>Todas las pizzas se venden en tamaños medianos y grandes</i></p>
       </section>
 
@@ -96,9 +91,9 @@
             <div id="preciosJamon" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
+                <p class="precios-info">Mediana: $5600</p>
                 <button id="btnMedianaJamon" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'jamon')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
+                <p class="precios-info">Grande: $6400</p>
                 <button id="btnGrandeJamon" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'jamon')">Agregar</button>
               </div>
             </div>
@@ -117,9 +112,9 @@
             <div id="preciosFugazzetta" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
+                <p class="precios-info">Mediana: $5600</p>
                 <button id="btnMedianaFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'fugazzetta')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
+                <p class="precios-info">Grande: $6400</p>
                 <button id="btnGrandeFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'fugazzetta')">Agregar</button>
               </div>
             </div>
@@ -138,9 +133,9 @@
             <div id="preciosNapolitana" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
+                <p class="precios-info">Mediana: $5600</p>
                 <button id="btnMedianaNapolitana" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'napolitana')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
+                <p class="precios-info">Grande: $6400</p>
                 <button id="btnGrandeNapolitana" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'napolitana')">Agregar</button>
               </div>
             </div>
@@ -159,9 +154,9 @@
             <div id="preciosSalame" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
+                <p class="precios-info">Mediana: $6000</p>
                 <button id="btnMedianaSalame" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'salame')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
+                <p class="precios-info">Grande: $6800</p>
                 <button id="btnGrandeSalame" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'salame')">Agregar</button>
               </div>
             </div>
@@ -180,9 +175,9 @@
             <div id="preciosHawaiana" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
+                <p class="precios-info">Mediana: $6000</p>
                 <button id="btnMedianaHawaiana" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'hawaiana')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
+                <p class="precios-info">Grande: $6800</p>
                 <button id="btnGrandeHawaiana" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'hawaiana')">Agregar</button>
               </div>
             </div>
@@ -190,12 +185,12 @@
       </section>
 
       <div id="notificacion" class="notificacion animado">
-        <h4>Se ha añadido el producto a tus <a class="car" href="#">pedidos</a>.</h4>
+        <h4>Se ha añadido el producto a tus <a class="car" href="./pedidos.html">pedidos</a>.</h4>
         <div id="compraInfo" class="compra-info">
           <div id="compraInfoProducto" class="compra-info-producto"></div>
         </div>
       </div>
-    </article>
+    </main>
 
     <!--Footer-->
     <footer id="footer">

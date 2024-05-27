@@ -1,39 +1,8 @@
-.titulos {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    width: 100%;
-    color: #FFF;
-}
-
-h2 {
-    font-size: 2vh;
-    margin-bottom: 2vh;
-}
-
-.titulo-principal {
-    font-family: 'Playfair';
-    font-size: 7vh;
-    color: #FFF;
-    margin-bottom: 3vh;
-}
-
 .ingredientes-titulo {
     margin-top: 2vh;
 }
 
-.car {
-    color: #FFF;
-    transition: all .5s;
-}
-
-.car:hover {
-    color: var(--primary-color);
-    transition: all .5s;
-}
-
 #banner {
-    background-image: url('../image/publicidad/publicidad.jpg');
     height: 30vh;
 }
 
@@ -43,7 +12,7 @@ h2 {
     flex-flow: column wrap;
     text-align: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
 
 .contenedor-pizzas {
@@ -79,32 +48,6 @@ h2 {
 
 .precios-info {
     margin: 1vh 0 1vh 0;
-}
-
-.boton-compra {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: all .5s;
-}
-
-.boton-compra:hover{
-    color:#F9F1E6 !important;
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.circulo {
-    display: none;
-    background-color: var(--third-color);
-    border-radius: 50%;
-    position: absolute;
-    transition: transform 1s ease;
-    height: 2vh;
-    width: 2vh;
-    z-index: 999;
 }
 
 .notificacion {

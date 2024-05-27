@@ -1,0 +1,93 @@
+.contenedor-principal {
+    margin-top: 8vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#banner {
+    height: 30vh;
+}
+
+.titulos {
+    text-align: center;
+}
+
+.contenedor-producto {
+    display: grid;
+    grid-template-columns: auto 20% 20% 20% auto;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    padding: 0 5vw 0 5vw;
+    margin: 3vh 0 3vh 0;
+}
+
+.imagen-producto {
+    height: 20vh;
+}
+
+.nombre-producto, .dato-producto, .precio-producto {
+    font-size: 20px;
+}
+
+.icono-basura {
+    cursor: pointer;
+}
+
+.contenedor-formulario {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 15vh 5vh 15vh;
+    margin-bottom: 5vh;
+}
+
+.titulo-formulario {
+    font-size: 25px;
+    margin-bottom: 2vw;
+}
+
+.input {
+    margin: 2vw 0 2vw 0;
+    background-color: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    width: 80%;
+}
+
+.dato {
+    height: 5vh;
+}
+
+.aclaracion {
+    height: 20vh;
+    resize: vertical;
+    padding-top: 2vh;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid var(--third-bis-color);
+}
+
+label {
+    display: block;
+    font-size: 20px;
+}
+
+.boton-compra {
+    margin-top: 2vh;
+}
