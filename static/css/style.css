@@ -28,8 +28,10 @@ a{
 }
 
 h2{
-    color:#FFF;
-    font-size: 2vw;
+    color:#F9F1E6;
+    font-family: 'Poetsen One';
+    background-color: #F97350;
+    
 }
 
 #logo{
@@ -42,7 +44,7 @@ h2{
 }
 
 .pizza-item-img {
-    width: 200px;
+    width: 300px;
     height: 300px;
     -o-object-fit: cover; 
     object-fit: cover;
@@ -142,7 +144,7 @@ encabezado, ancho y z-index -------------------------------------------*/
     font-family: 'Nunito', sans-serif;
 }
 
-.pizza-item-detail {
+/*.pizza-item-detail {
     bottom: -100%;
     padding: 30px;
     max-height: 100%;
@@ -153,7 +155,7 @@ encabezado, ancho y z-index -------------------------------------------*/
     box-sizing: border-box;
     transition: bottom 0.4s ease-in-out;
     width: 100%;
-}
+}*/
 
 .pizza-item-detail-title {
     color: white;
@@ -270,22 +272,22 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
     color:#FFF;
     font-size: 4vw;
 }
-.card-banner h2{
+.card-banner h2, .container h2{
     margin-bottom: 20px;
 }
 
 
 
-#popular,#top-rated {
+#popular,#top-rated , #resenias, #promos{
     text-align: center;
 }
 
-#popular h2,#top-rated h2{
+#popular h2,#top-rated h2, #promos h2{
     margin: 30px 0px;
 }
 
 .pizza-item{
-    border-radius: 20px;
+    /*border-radius: 20px;
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -295,23 +297,32 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
     cursor: pointer;
     transition: all 450ms;
     -webkit-transform-origin: center left;
-            transform-origin: center left;
+            transform-origin: center left;*/
+            
+            width: 100vw;
+            max-width: 35vh;
+            padding: 0vh; /*era 5*/
+            color: white;
+            border-radius: 10px;
+            margin: 0 1vw 2vw 1vw;
+            box-shadow: 0px 0px 25px 0px #dfd7cb;
+            display: inline-block;
 }
 
 /* Efecto que ocurre al pasar el cursor sube una ventana en 
 cada imagen de cada película y muestra los detalles */
-.pizza-item:hover{
+/*.pizza-item:hover{
     opacity: 0.9;
-}
+}*/
 
-.pizza-item:hover .pizza-item-detail {
+/*.pizza-item:hover .pizza-item-detail {
     bottom: 0;
 } */
  
 /* Agrega una estrella al lado del subtitulo */
-.pizza-item-detail-subtitle::after{
+/*.pizza-item-detail-subtitle::after{
     content: '🌟';
-}
+}*/
 
 
 #footer a {
@@ -338,7 +349,7 @@ están en la sección  */
 Propiedades para el contenedor Flex, y los Flex items ---------------------*/
 #footer {
     align-items: center;
-    background-color: var(--third-color);
+    background-color: #222C2E;
     display: flex;
     height: 100px;
     width: 100%;
