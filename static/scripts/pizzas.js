@@ -1,55 +1,83 @@
 /**
- * Realiza la transición de un circulo desde una posición inicial hasta una posición final
+ * Añade la pizza seleccionada a los pedidos.
  * 
- * @param {string} idInicio - id de un elemento HTML
- * @param {string} idFin - id de un elemento HTML
+ * @param {string} tamaño - El tamaño correspondiente a la pizza seleccionada.
+ * @param {string} nombrePizza - El nombre de la pizza seleccionada.
  */
-function moverCirculo(idInicio, idFin) {
-    const circulo = document.getElementById('circulo');
-    const inicio = document.getElementById(idInicio);
-    const fin = document.getElementById(idFin);
-
-    // Obtengo los 'rectángulos delimitadores' para los botones y el article que los contiene
-    const inicioRect = inicio.getBoundingClientRect();
-    const finRect = fin.getBoundingClientRect();
-    const contenedorRect = document.querySelector('.contenedor-opciones').getBoundingClientRect();
-
-    // Calculo las posiciones iniciales y finales del movimiento que va a realizar el circulo
-    const ajustePixeles = 10;
-    const inicioX = inicioRect.left - contenedorRect.left + inicioRect.width / 2 - ajustePixeles;
-    const inicioY = inicioRect.top - contenedorRect.top + inicioRect.height / 2 - ajustePixeles;
-    const finX = finRect.left - contenedorRect.left + finRect.width / 2 - ajustePixeles;
-    const finY = finRect.top - contenedorRect.top + finRect.height / 2 - ajustePixeles;
-
-    // Movemos el círculo a la posición inicial del movimiento
-    circulo.style.left = `${inicioX}px`;
-    circulo.style.top = `${inicioY}px`;
-    circulo.style.display = 'block';
-
-    // Con esto forzamos que la transición se reinicire correctamente
-    circulo.getBoundingClientRect();
-
-    // Realiza el movimiento del circulo de un botón a otro
-    let miliSegundos = 10;
-    setTimeout(() => {
-        circulo.style.transform = `translate(${finX - inicioX}px, ${finY - inicioY}px)`;
-    }, miliSegundos);
-
-    // Reinicio el círculo a su origen después de la animación
-    miliSegundos = 1010;
-    setTimeout(() => {
-        circulo.style.display = 'none';
-        circulo.style.transform = 'none';
-    }, miliSegundos);
+function sumarProductoCarrito(tamaño, nombrePizza) {
+    // moverCirculo(idBotonCompra, 'botonPedidos');
+    mostrarNotificacion(tamaño, nombrePizza);
+    
+    /*
+        Parte del código en la que vamos a almacenar la
+        información de la compra en una base de datos para
+        poder recuperarlos después en la página de pedidos. 
+    */
 }
+
+let funcionEnProceso = false;
+let cola = [];
 
 /**
- * Realiza una animación para indicar que se sumó un producto al carrito, y suma ese producto a una base de datos.
+ * Muestra una notificación, correspondiente a la pizza seleccionada, en pantalla para notificar la compra al usuario.
  * 
- * @param {string} idBotonCompra - id del botón con el que se realizó la compra
+ * @param {string} tamaño - El tamaño que se va a mostrar en la notificación.
+ * @param {string} nombrePizza - El nómbre de la pizza que se va a mostrar en la notificación.
  */
-function sumarProductoCarrito(idBotonCompra) {
-    moverCirculo(idBotonCompra, 'botonPedidos');
+function mostrarNotificacion(tamaño, nombrePizza) {
+
+    // En caso de que la función ya esté en progreso, añadimos su llamada a una cola.
+    if(funcionEnProceso) {
+        cola.push(sumarProductoCarrito.bind(this, tamaño, nombrePizza));
+        return;
+    }
+
+    // Marcamos esta variable como true, para que a partir del próximo llamado se acumulen en la cola.
+    funcionEnProceso = true;
+
+    // Modificamos la notificación en base a los parámetros recibidos.
+    const notificacion = document.getElementById('notificacion');
+    const espacioImagen = document.getElementById('compraInfo');
+    const informacion = document.getElementById('compraInfoProducto');
+
+    estadoInicial = notificacion.innerHTML;
     
-    // Parte del código en la que vamos a envíar los datos.
+    const imagen = document.createElement('img');
+    imagen.id = 'compraImagen';
+    imagen.src = `../static/image/comercial/pizza/pizza-${nombrePizza}.png`;
+    imagen.alt = 'Imagen de la pizza que agregó al carrito.';
+
+    const datosPizza = document.createElement('p');
+    datosPizza.innerText  = `Pizza: ${nombrePizza[0].toUpperCase() + nombrePizza.slice(1)}`;
+
+    const datosTamaño = document.createElement('p');
+    datosTamaño.innerText = `Tamaño: ${tamaño}`;
+
+    // En el caso en el que el ancho de la pantalla sea mayor a 540px, se añade la imagen a la notificación
+    if(window.innerWidth > 540) {
+        espacioImagen.appendChild(imagen);
+    }
+
+    informacion.appendChild(datosPizza);
+    informacion.appendChild(datosTamaño);
+
+    notificacion.classList.toggle('animado');
+    
+    // La devolvemos a su estado inicial después de 2 segundos.  
+    setTimeout(() => {
+        notificacion.classList.toggle('animado');
+        // Esperamos a que la notificacion se despeje hacia la derecha para que desaparezca.
+        setTimeout(() => {
+            notificacion.innerHTML = estadoInicial;
+        }, 400);
+        // Marcamos como que el primer llamado a la función ya no está en progreso, y empezamos a llamar a los que están en la cola.
+        setTimeout(() => {
+            funcionEnProceso = false;
+            if(cola.length > 0) {
+                let siguienteNotificacion = cola.shift();
+                siguienteNotificacion();
+            }
+        }, 400);
+    }, 2000);
 }
+
