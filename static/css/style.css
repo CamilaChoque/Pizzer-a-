@@ -28,10 +28,8 @@ a{
 }
 
 h2{
-    color:#F9F1E6;
-    font-family: 'Poetsen One';
-    background-color: #F97350;
-    
+    color:#FFF;
+    font-size: 2vw;
 }
 
 #logo{
@@ -44,7 +42,7 @@ h2{
 }
 
 .pizza-item-img {
-    width: 300px;
+    width: 200px;
     height: 300px;
     -o-object-fit: cover; 
     object-fit: cover;
@@ -144,7 +142,7 @@ encabezado, ancho y z-index -------------------------------------------*/
     font-family: 'Nunito', sans-serif;
 }
 
-/*.pizza-item-detail {
+.pizza-item-detail {
     bottom: -100%;
     padding: 30px;
     max-height: 100%;
@@ -155,7 +153,7 @@ encabezado, ancho y z-index -------------------------------------------*/
     box-sizing: border-box;
     transition: bottom 0.4s ease-in-out;
     width: 100%;
-}*/
+}
 
 .pizza-item-detail-title {
     color: white;
@@ -272,22 +270,22 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
     color:#FFF;
     font-size: 4vw;
 }
-.card-banner h2, .container h2{
+.card-banner h2{
     margin-bottom: 20px;
 }
 
 
 
-#popular,#top-rated , #resenias, #promos{
+#popular,#top-rated {
     text-align: center;
 }
 
-#popular h2,#top-rated h2, #promos h2{
+#popular h2,#top-rated h2{
     margin: 30px 0px;
 }
 
 .pizza-item{
-    /*border-radius: 20px;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -297,32 +295,23 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
     cursor: pointer;
     transition: all 450ms;
     -webkit-transform-origin: center left;
-            transform-origin: center left;*/
-            
-            width: 100vw;
-            max-width: 35vh;
-            padding: 0vh; /*era 5*/
-            color: white;
-            border-radius: 10px;
-            margin: 0 1vw 2vw 1vw;
-            box-shadow: 0px 0px 25px 0px #dfd7cb;
-            display: inline-block;
+            transform-origin: center left;
 }
 
 /* Efecto que ocurre al pasar el cursor sube una ventana en 
 cada imagen de cada película y muestra los detalles */
-/*.pizza-item:hover{
+.pizza-item:hover{
     opacity: 0.9;
-}*/
+}
 
-/*.pizza-item:hover .pizza-item-detail {
+.pizza-item:hover .pizza-item-detail {
     bottom: 0;
 } */
  
 /* Agrega una estrella al lado del subtitulo */
-/*.pizza-item-detail-subtitle::after{
+.pizza-item-detail-subtitle::after{
     content: '🌟';
-}*/
+}
 
 
 #footer a {
@@ -338,12 +327,9 @@ cada imagen de cada película y muestra los detalles */
     color:var(--secondary-color);
 }
 
-/* Estilos a los nombres de las películas que 
-están en la sección  */
 .pizza-item-detail-title-v2:hover {
     color: var(--primary-color);
 }
-
 
 /* CSS 5. Flexbox. Media Queries. ¿Qué es Flexbox?
 Propiedades para el contenedor Flex, y los Flex items ---------------------*/
@@ -362,8 +348,6 @@ Propiedades para el contenedor Flex, y los Flex items ---------------------*/
     justify-content: center;
     align-items: center;
 }
-
-
 
 /* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -396,7 +380,6 @@ Propiedades para el contenedor Flex, y los Flex items ---------------------*/
 
     }
 }
-
 
 /* CELULARES */
 @media screen and (max-width: 767px) {
@@ -440,10 +423,6 @@ Propiedades para el contenedor Flex, y los Flex items ---------------------*/
     }
 }
 
-
-/* Clase Nº6:PLAN DE ESTUDIOS: Grid. Implementación
-de Grid. Maquetado con Flex y Grid. */
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -458,8 +437,6 @@ nav{
     list-style: none;
 }
 
-/* Centra el texto que info sobre películas 
-y series ilimitadas */
 .d-flex{
     display: flex;
     justify-content: center;
@@ -549,16 +526,16 @@ y series ilimitadas */
     color: #FFF;
 }
 
-h2 {
-    font-size: 2vh;
-    margin-bottom: 2vh;
-}
-
 .titulo-principal {
     font-family: 'Playfair';
     font-size: 7vh;
     color: #FFF;
     margin-bottom: 3vh;
+}
+
+.titulo-secundario{
+    font-family: 'Bebas Neue';
+    font-size: 3vh;
 }
 
 .car {
@@ -572,12 +549,13 @@ h2 {
 }
 
 .boton-compra {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    background-color: #C85043;
+    color: white;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: bold;
     transition: all .5s;
+    border: none;
 }
 
 .boton-compra:hover{

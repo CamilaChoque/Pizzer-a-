@@ -91,3 +91,8 @@ label {
 .boton-compra {
     margin-top: 2vh;
 }
+
+.precio-total {
+    font-size: 25px;
+    margin: 2vh 0 4vh 0;
+}
