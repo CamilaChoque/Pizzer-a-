@@ -3,10 +3,11 @@
  * 
  * @param {string} tamaño - El tamaño correspondiente a la pizza seleccionada.
  * @param {string} nombrePizza - El nombre de la pizza seleccionada.
+ * @param {number} precioPizza - El precio de la pizza seleccionada.
  */
-function sumarProductoCarrito(tamaño, nombrePizza) {
+function sumarProductoCarrito(tamaño, nombrePizza, precioPizza) {
     // moverCirculo(idBotonCompra, 'botonPedidos');
-    mostrarNotificacion(tamaño, nombrePizza);
+    mostrarNotificacion(tamaño, nombrePizza, precioPizza);
     
     /*
         Parte del código en la que vamos a almacenar la
@@ -23,12 +24,15 @@ let cola = [];
  * 
  * @param {string} tamaño - El tamaño que se va a mostrar en la notificación.
  * @param {string} nombrePizza - El nómbre de la pizza que se va a mostrar en la notificación.
+ * @param {number} precioPizza - El precio de la pizza que se va a mostrar en la notificación.
  */
-function mostrarNotificacion(tamaño, nombrePizza) {
+function mostrarNotificacion(tamaño, nombrePizza, precioPizza) {
+
+    console.log(precioPizza)
 
     // En caso de que la función ya esté en progreso, añadimos su llamada a una cola.
     if(funcionEnProceso) {
-        cola.push(sumarProductoCarrito.bind(this, tamaño, nombrePizza));
+        cola.push(sumarProductoCarrito.bind(this, tamaño, nombrePizza, precioPizza));
         return;
     }
 
@@ -37,8 +41,8 @@ function mostrarNotificacion(tamaño, nombrePizza) {
 
     // Modificamos la notificación en base a los parámetros recibidos.
     const notificacion = document.getElementById('notificacion');
-    const espacioImagen = document.getElementById('compraInfo');
-    const informacion = document.getElementById('compraInfoProducto');
+    const espacioImagen = document.getElementById('descripcionContenedor');
+    const informacion = document.getElementById('compraInfo');
 
     estadoInicial = notificacion.innerHTML;
     
@@ -47,25 +51,27 @@ function mostrarNotificacion(tamaño, nombrePizza) {
     imagen.src = `../static/image/comercial/pizza/pizza-${nombrePizza}.png`;
     imagen.alt = 'Imagen de la pizza que agregó al carrito.';
 
-    const datosPizza = document.createElement('p');
-    datosPizza.innerText  = `Pizza: ${nombrePizza[0].toUpperCase() + nombrePizza.slice(1)}`;
-
+    const datosNombre = document.createElement('p');
+    datosNombre.innerText  = `Pizza: ${nombrePizza[0].toUpperCase() + nombrePizza.slice(1)}`;
     const datosTamaño = document.createElement('p');
     datosTamaño.innerText = `Tamaño: ${tamaño}`;
+    const datosPrecio = document.createElement('p');
+    datosPrecio.innerText = `Precio: $${precioPizza}`
 
-    // En el caso en el que el ancho de la pantalla sea mayor a 540px, se añade la imagen a la notificación
+    /* En el caso en el que el ancho de la pantalla sea menor o igual a 540px, no se añaden algunos datos, para mejorar la visualización de la página en
+    dispositivos móviles.*/ 
     if(window.innerWidth > 540) {
         espacioImagen.appendChild(imagen);
     }
-
-    informacion.appendChild(datosPizza);
+    informacion.appendChild(datosNombre);
     informacion.appendChild(datosTamaño);
+    informacion.appendChild(datosPrecio);
 
-    notificacion.classList.toggle('animado');
+    notificacion.classList.toggle('mostrar');
     
     // La devolvemos a su estado inicial después de 2 segundos.  
     setTimeout(() => {
-        notificacion.classList.toggle('animado');
+        notificacion.classList.toggle('mostrar');
         // Esperamos a que la notificacion se despeje hacia la derecha para que desaparezca.
         setTimeout(() => {
             notificacion.innerHTML = estadoInicial;
@@ -78,6 +84,5 @@ function mostrarNotificacion(tamaño, nombrePizza) {
                 siguienteNotificacion();
             }
         }, 400);
-    }, 2000);
+    }, 2500);
 }
-

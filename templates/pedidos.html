@@ -22,6 +22,7 @@
  
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Satisfy&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
      <!-- vinculación fontawesome -->
      <script src="https://kit.fontawesome.com/9ecf2606fd.js" crossorigin="anonymous"></script>
@@ -51,51 +52,55 @@
         <!--Títulos del sitio-->
         <section id="banner" class="titulos">
             <h1 class="titulo-principal">Pedido</h1>
-            <h2>Si aún no seleccionaste ningún producto, por favor dirigete a <a class="car" href="./pizzas.html">menú</a> para añadir productos.</h2>
+            <h2 class="titulo-secundario">Si aún no seleccionaste ningún producto, por favor dirigete a <a class="car" href="./pizzas.html">menú</a> para añadir productos.</h2>
         </section>
 
-        <!--Productos seleccionados del menú-->
-        <div class="productos-elegidos">
-            <!--Por ahora, ponemos pedidos prehechos, hasta que podamos recibir la información de una base de datos-->
-            <div class="contenedor-producto">
-                <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-muzzarella.png" alt="Foto de nuestra pizza de muzzarella">
-                <p class="nombre-producto">Nombre: Pizza de Muzzarella</p>
-                <p class="dato-producto">Tamaño: Mediana</p>
-                <p class="precio-producto">Precio: $5200</p>
-                <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true"></i>
-            </div>
-            <div class="contenedor-producto">
-                <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-salame.png" alt="Foto de nuestra pizza de muzzarella">
-                <p class="nombre-producto">Nombre: Pizza de Salame picante</p>
-                <p class="dato-producto">Tamaño: Grande</p>
-                <p class="precio-producto">Precio: $6800</p>
-                <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true"></i>
-            </div>
-            <div class="contenedor-producto">
-                <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-napolitana.png" alt="Foto de nuestra pizza de muzzarella">
-                <p class="nombre-producto">Nombre: Pizza Napolitana</p>
-                <p class="dato-producto">Tamaño: Mediana</p>
-                <p class="precio-producto">Precio: $5600</p>
-                <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true"></i>
-            </div>
-        </div>
+      <!--Productos seleccionados del menú-->
+      <div id="productosElegidos" class="productos-elegidos">
+          <!--Por ahora, ponemos pedidos prehechos, hasta que podamos recibir la información de una base de datos-->
+          <div id="contenedor0" class="contenedor-producto">
+            <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-muzzarella.png" alt="Foto de nuestra pizza de muzzarella">
+            <p class="nombre-producto">Nombre: Pizza de Muzzarella</p>
+            <p class="dato-producto">Tamaño: Mediana</p>
+            <p class="precio-producto">Precio: $5200</p>
+            <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true" onclick="eliminarProducto('contenedor0')"></i>
+          </div>
+          <div id="contenedor1" class="contenedor-producto">
+            <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-salame.png" alt="Foto de nuestra pizza de muzzarella">
+            <p class="nombre-producto">Nombre: Pizza de Salame picante</p>
+            <p class="dato-producto">Tamaño: Grande</p>
+            <p class="precio-producto">Precio: $6800</p>
+            <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true" onclick="eliminarProducto('contenedor1')"></i>
+          </div>
+          <div id="contenedor2" class="contenedor-producto">
+            <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-napolitana.png" alt="Foto de nuestra pizza de muzzarella">
+            <p class="nombre-producto">Nombre: Pizza Napolitana</p>
+            <p class="dato-producto">Tamaño: Mediana</p>
+            <p class="precio-producto">Precio: $5600</p>
+            <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true" onclick="eliminarProducto('contenedor2')"></i>
+          </div>
+      </div>
 
-        <!--Datos para realizar la compra-->
-        <section class="contenedor-formulario">
-            <h4 class="titulo-formulario">Llena estos datos para confirmar tu compra</h4>
-            <form action="../index.html">
-                <label for="nombre">Nombre con el que nos referiremos a usted: </label>
-                <input id="nombre" class="input dato" name="nombre" type="text" placeholder="Ingresa tu nombre aquí...">
-                <label for="mail">Mail para contactarnos en caso de que ocurra algo con su pedido: </label>
-                <input id="mail" class="input dato" name="mail" type="email" placeholder="Ingresa tu mail aquí...">
-                <label for="direccion">Dirección a la que enviaremos el pedido: </label>
-                <input id="direccion" class="input dato" name="direccion" type="text">
-                <label for="aclaracion">¿Nos quieres hacer alguna aclaracion sobre el pedido?</label>
-                <textarea id="aclaracion" class="input aclaracion" name="aclaracion" placeholder="Ingresa tu aclaración aquí (opcional)..."></textarea>
-                <p>*<i>Aceptamos dinero en efectivo o transferencia de Mercado Pago por un qr que le mostrará el repartidor como métodos de pago.</i></p>
-                <input class="boton-compra" type="submit" value="Confirmar">
-            </form>
-        </section>
+      <!--Datos para realizar la compra-->
+      <section class="contenedor-formulario">
+          <h4 class="titulo-formulario">Llena estos datos para confirmar tu compra</h4>
+          <form action="../index.html">
+            <label for="nombre">Nombre con el que nos referiremos a usted: </label>
+            <input id="nombre" class="input dato" name="nombre" type="text" placeholder="Ingresa tu nombre aquí...">
+            <label for="mail">Mail para contactarnos en caso de que ocurra algo con su pedido: </label>
+            <input id="mail" class="input dato" name="mail" type="email" placeholder="Ingresa tu mail aquí...">
+            <label for="direccion">Dirección a la que enviaremos el pedido: </label>
+            <input id="direccion" class="input dato" name="direccion" type="text" placeholder="Ingresa tu dirección aquí...">
+            <label for="aclaracion">¿Nos quieres hacer alguna aclaracion sobre el pedido?</label>
+            <textarea id="aclaracion" class="input aclaracion" name="aclaracion" placeholder="Ingresa tu aclaración aquí (opcional)..."></textarea>
+            <div id="contenedorTotal" class="contenedor-total">
+              <p>El total a pagar es:</p>
+              <p id="precioTotal" class="precio-total"></p>
+            </div>
+            <p>*<i>Aceptamos dinero en efectivo o transferencia de Mercado Pago por un qr que le mostrará el repartidor como métodos de pago.</i></p>
+            <input class="boton-compra" type="submit" value="Confirmar">
+          </form>
+      </section>
     </main>
 
     <!--Footer-->
