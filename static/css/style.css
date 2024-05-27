@@ -540,3 +540,48 @@ y series ilimitadas */
 .d-iframe{
     width: 100%;
 } 
+
+.titulos {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+    color: #FFF;
+}
+
+h2 {
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.titulo-principal {
+    font-family: 'Playfair';
+    font-size: 7vh;
+    color: #FFF;
+    margin-bottom: 3vh;
+}
+
+.car {
+    color: #FFF;
+    transition: all .5s;
+}
+
+.car:hover {
+    color: var(--primary-color);
+    transition: all .5s;
+}
+
+.boton-compra {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.boton-compra:hover{
+    color:#F9F1E6 !important;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}

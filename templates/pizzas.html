@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Estancia - Productos</title>
-    <link rel="Icon" href="../static/img/favicon.ico" type="image/x-ico">
 
     <!--Vinculación con CSS-->
     <link rel="stylesheet" href="../static/css/style.css">
@@ -34,33 +33,32 @@
   <body>
     <!--Encabezado-->
     <header class="header">
+      <nav>
+        <!-- Logo -->
+        <div id="logo">
+          <a href="../index.html">
+            <span class="logo-text">La estancia</span>
+          </a>
+        </div>
 
-    <nav>
-      <!-- Logo -->
-      <div id="logo">
-        <a href="../index.html">
-          <span class="logo-text">La estancia</span>
-        </a>
-      </div>
-
-      <!-- hipervínculos del menú -->
-      <ul class="nav-links">
-        <li><a href="./pizzas.html" class="btn-cac">Menú</a></li>
-        <li id="botonPedidos"><a href="#" class="btn-cac">Pedidos</a></li>
-        <li>
-            <a href="./contacto.html" class="btn-cac">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-
-  </header>
+        <!-- hipervínculos del menú -->
+        <ul class="nav-links">
+          <li><a href="./pizzas.html" class="btn-cac">Menú</a></li>
+          <li><a href="./pedidos.html" class="btn-cac">Pedidos</a></li>
+          <li><a href="./contacto.html" class="btn-cac">Contacto</a></li>
+        </ul>
+      </nav>
+   </header>
     
     <!--Contenido Principal-->
-    <article class="contenedor-opciones">
+    <main class="contenedor-opciones">
       <!--Titulos del Sitio-->
       <section id="banner" class="titulos">
         <h1 class="titulo-principal">Menú</h1>
         <p class="titulo-secundario">¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car titulo-secundario" href="#">pedido</a></p>
+
+        <h2>¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car" href="./pedidos.html">pedido</a> para realizar la compra.</h2>
+
         <p>*<i>Todas las pizzas se venden en tamaños medianos y grandes</i></p>
       </section>
 
@@ -82,13 +80,12 @@
               <div class="precios">
                 <div class="precios-opcion1">
                   <p class="precios-info">Mediana: $5200</p>
-                  <button id="btnMedianaMuzzarella" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaMuzzarella')">Agregar</button>
+                  <button id="btnMedianaMuzzarella" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'muzzarella')">Agregar</button>
                 </div>
                 <div class="precios-opcion2">
                   <p class="precios-info">Grande: $6000</p>
-                  <button id="btnGrandeMuzzarella" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeMuzzarella')">Agregar</button>
+                  <button id="btnGrandeMuzzarella" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'muzzarella')">Agregar</button>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -107,10 +104,10 @@
             <div id="preciosJamon" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
-                <button id="btnMedianaJamon" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaJamon')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
-                <button id="btnGrandeJamon" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeJamon')">Agregar</button>
+                <p class="precios-info">Mediana: $5600</p>
+                <button id="btnMedianaJamon" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'jamon')">Agregar</button>
+                <p class="precios-info">Grande: $6400</p>
+                <button id="btnGrandeJamon" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'jamon')">Agregar</button>
               </div>
             </div>
           </div>
@@ -129,10 +126,10 @@
             <div id="preciosFugazzetta" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
-                <button id="btnMedianaFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaFugazzetta')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
-                <button id="btnGrandeFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeFugazzetta')">Agregar</button>
+                <p class="precios-info">Mediana: $5600</p>
+                <button id="btnMedianaFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'fugazzetta')">Agregar</button>
+                <p class="precios-info">Grande: $6400</p>
+                <button id="btnGrandeFugazzetta" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'fugazzetta')">Agregar</button>
               </div>
             </div>
           </div>
@@ -151,10 +148,10 @@
             <div id="preciosNapolitana" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
-                <button id="btnMedianaNapolitana" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaNapolitana')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
-                <button id="btnGrandeNapolitana" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeNapolitana')">Agregar</button>
+                <p class="precios-info">Mediana: $5600</p>
+                <button id="btnMedianaNapolitana" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'napolitana')">Agregar</button>
+                <p class="precios-info">Grande: $6400</p>
+                <button id="btnGrandeNapolitana" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'napolitana')">Agregar</button>
               </div>
             </div>
           </div>
@@ -173,10 +170,10 @@
             <div id="preciosSalame" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
-                <button id="btnMedianaSalame" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaSalame')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
-                <button id="btnGrandeSalame" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeSalame')">Agregar</button>
+                <p class="precios-info">Mediana: $6000</p>
+                <button id="btnMedianaSalame" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'salame')">Agregar</button>
+                <p class="precios-info">Grande: $6800</p>
+                <button id="btnGrandeSalame" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'salame')">Agregar</button>
               </div>
             </div>
           </div>
@@ -195,22 +192,27 @@
             <div id="preciosHawaiana" class="contenedor-precios">
               <h4 class="precios-titulo">Precios:</h4>  
               <div class="precios">
-                <p class="precios-info">Mediana: $5200</p>
-                <button id="btnMedianaHawaiana" class="boton-compra" onclick="sumarProductoCarrito('btnMedianaHawaiana')">Agregar</button>
-                <p class="precios-info">Grande: $6000</p>
-                <button id="btnGrandeHawaiana" class="boton-compra" onclick="sumarProductoCarrito('btnGrandeHawaiana')">Agregar</button>
+                <p class="precios-info">Mediana: $6000</p>
+                <button id="btnMedianaHawaiana" class="boton-compra" onclick="sumarProductoCarrito('Mediana', 'hawaiana')">Agregar</button>
+                <p class="precios-info">Grande: $6800</p>
+                <button id="btnGrandeHawaiana" class="boton-compra" onclick="sumarProductoCarrito('Grande', 'hawaiana')">Agregar</button>
               </div>
             </div>
           </div>
       </section>
 
-      <div id="circulo" clasS="circulo"></div>
-    </article>
+      <div id="notificacion" class="notificacion animado">
+        <h4>Se ha añadido el producto a tus <a class="car" href="./pedidos.html">pedidos</a>.</h4>
+        <div id="compraInfo" class="compra-info">
+          <div id="compraInfoProducto" class="compra-info-producto"></div>
+        </div>
+      </div>
+    </main>
 
     <!--Footer-->
     <footer id="footer">
-      <a href="">Términos y condiciones</a>
-      <a href="">Nosotros</a>
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Nosotros</a>
     </footer>
 
     <!--Vinculación con JavaScript-->
