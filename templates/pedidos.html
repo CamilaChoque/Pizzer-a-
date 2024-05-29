@@ -49,14 +49,19 @@
     
     <!--Contenido Principal-->
     <main class="contenedor-principal">
+
         <!--Títulos del sitio-->
-        <section id="banner" class="titulos">
+        <section id="banner-pedidos" class="d-flex">
+          <div class="card-banner container">
             <h1 class="titulo-principal">Pedido</h1>
             <h2 class="titulo-secundario">Si aún no seleccionaste ningún producto, por favor dirigete a <a class="car" href="./pizzas.html">menú</a> para añadir productos.</h2>
+          </div>
         </section>
 
-      <!--Productos seleccionados del menú-->
-      <div id="productosElegidos" class="productos-elegidos">
+      
+      <div class="productos-formulario">
+        <!--Productos seleccionados del menú-->
+        <section id="productosElegidos" class="productos-elegidos">
           <!--Por ahora, ponemos pedidos prehechos, hasta que podamos recibir la información de una base de datos-->
           <div id="contenedor0" class="contenedor-producto">
             <img class="imagen-producto" src="../static/image/comercial/pizza/pizza-muzzarella.png" alt="Foto de nuestra pizza de muzzarella">
@@ -79,10 +84,10 @@
             <p class="precio-producto">Precio: $5600</p>
             <i class="fa fa-trash fa-2x icono-basura" aria-hidden="true" onclick="eliminarProducto('contenedor2')"></i>
           </div>
-      </div>
+        </section>
 
-      <!--Datos para realizar la compra-->
-      <section class="contenedor-formulario">
+        <!--Datos para realizar la compra-->
+        <section class="contenedor-formulario">
           <h4 class="titulo-formulario">Llena estos datos para confirmar tu compra</h4>
           <form action="../index.html">
             <label for="nombre">Nombre con el que nos referiremos a usted: </label>
@@ -100,15 +105,36 @@
             <p>*<i>Aceptamos dinero en efectivo o transferencia de Mercado Pago por un qr que le mostrará el repartidor como métodos de pago.</i></p>
             <input class="boton-compra" type="submit" value="Confirmar">
           </form>
-      </section>
+        </section>
+      </div>
     </main>
 
     <!--Footer-->
     <footer id="footer">
-      <a href="#">Términos y condiciones</a>
-      <a href="#">Nosotros</a>
-    </footer>
 
+      <div class="contacto contacto-sucursal">
+          <p>Télefono: 1183738212</p>
+          <p>Email: LaEstancia@gmail.com.ar</p>
+      </div>
+      <div class="caja-flexible">
+          <div class="contacto contacto-individual">
+              <p>Contacto</p>
+              <ul>
+                  <li><a href="https://www.linkedin.com/in/camilachoquemamani/">Camila Choque</a></li>
+                  <li><a href="https://www.linkedin.com/in/bono-ezequiel-neer-900a85258/">Bono Neer</a></li>
+              </ul>
+          </div>
+          <div class="navegadores">
+              <p>Navegaciones</p>
+              <ul>
+                  <li><a href="./templates/pizzas.html">Menú</a></li>
+                  <li><a href="./templates/pedidos.html">Pedidos</a></li>
+                  <li><a href="./templates/contacto.html">Contacto</a></li>
+              </ul>
+          </div>
+      </div>
+      
+  </footer>
     <!--Vinculación con JavaScript-->
     <script src="../static/scripts/pedidos.js"></script>
   </body>

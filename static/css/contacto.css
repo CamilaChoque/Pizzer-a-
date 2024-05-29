@@ -1,0 +1,159 @@
+
+/*estilos del banner*/
+#banner-contacto{
+    height: 37vh;
+    background-image: url('../image/publicidad/contacto.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+    text-align: center;
+    
+}
+.d-flex{
+    display: flex ; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+
+
+.card-banner{
+    margin: 0 auto;
+}
+.card-banner h1{
+    margin: 50px;
+    font-family: 'Playfair';
+    color:#FFF;
+    font-size: 4vw;
+}
+
+.card-banner h2, .container h2{
+    margin-bottom: 20px;
+}
+.titulo-principal {
+    font-family: 'Playfair';
+    font-size: 7vh;
+    color: #FFF;
+    margin-bottom: 3vh;
+    
+    
+}
+.titulo-secundario{
+    font-family: 'Bebas Neue';
+    font-size: 3vh;
+    color: white;
+    margin-bottom: 2vh;
+}
+.titulo-secundario a{
+    text-decoration: none;
+}
+
+
+/*formulario*/
+
+#form-wrapper {
+    border-radius: 10px;
+    margin: auto;
+    padding: 90px 0px;
+    
+}
+
+.formulario{
+    min-width: 800px;
+    max-width: 900px;
+}
+.formulario-container{
+    
+    margin-top: 8vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+    
+}
+
+
+.formulario-container h2 {
+    margin-bottom: 20px;
+    
+    text-align: center;
+    padding: 8px 20px;
+    background-color: #FB6C5C;
+    border-radius: 50px;
+    color: #F9F1E6;
+}
+
+.campo-nombre-completo{
+    display: flex;
+    justify-content: space-around;
+
+}
+.campo-nombre-completo .campo{
+    width: 100%;
+}
+
+.campo {
+    
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FB6C5C;
+}
+
+input{
+    padding: 12px 15px;
+    
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+input:focus{
+    border: 2px solid #B7AC9a;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+textarea {
+    
+    min-width: 890px;
+    min-height: 300px;
+    resize: none;       
+    overflow: auto; 
+    font-size: 15px;
+}
+textarea:focus{
+    border: 2px solid #B7AC9a;
+    outline: none;
+    
+    
+}
+
+button {
+    color: #E98158;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #FB6C5C;
+    float: right;
+}

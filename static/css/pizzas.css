@@ -1,15 +1,52 @@
+
 .ingredientes-titulo {
     margin-top: 2vh;
     color: #222C2E;
 }
 
+.card-banner{
+    margin: 0 auto;
+    color: white;
+}
+.card-banner h1{
+    margin: 50px;
+    font-family: 'Playfair';
+    font-size: 4vw;
+    
+}
+
+.card-banner h2, .container h2{
+    margin-bottom: 20px;
+}
+.titulo-principal {
+    font-family: 'Playfair';
+    font-size: 7vh;
+    margin-bottom: 3vh;
+}
+.titulo-secundario{
+    font-family: 'Bebas Neue';
+    font-size: 3vh;
+    margin-bottom: 2vh;
+}
 .ingredientes{
     color:#222C2E;
 }
-
-#banner {
-    height: 30vh;
+.d-flex{
+    display: flex ; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   
 }
+#banner-menu{
+    height: 37vh;
+    background-image: url('../image/publicidad/publicidad-menu.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+    text-align: center;
+}
+
 
 .contenedor-opciones {
     position: relative;

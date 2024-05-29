@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/contacto.css">
     <title>Contacto - La Estancia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Danfo&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Sancreek&display=swap" rel="stylesheet">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Satisfy&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -13,19 +24,16 @@
         <nav>
             <!-- Logo -->
             <div id="logo">
-                <a href="/">
-                    
+                <a href="../index.html">
                     <span class="logo-text">La estancia</span>
                 </a>
             </div>
 
             <!-- hipervínculos del menú -->
             <ul class="nav-links">
-                <li><a href="./pizzas.html" class="btn-cac"</a>Menú</a></li>
-                <li><a href="#" class="btn-cac">Pedidos</a></li>
-                <li>
-                    <a href="./contacto.html" class="btn-cac">Contacto</a>
-                </li>
+                <li><a href="./pizzas.html" class="btn-cac">Menú</a></li>
+                <li><a href="./pedidos.html" class="btn-cac">Pedidos</a></li>
+                <li><a href="./" class="btn-cac">Contacto</a></li>
             </ul>
         </nav>
 
@@ -34,45 +42,77 @@
     <!-- Contenido -->
     <main>
 
+        <!--Títulos del sitio-->
+        <section id="banner-contacto" class="d-flex">
+            <div class="card-banner container">
+              <h1 class="titulo-principal">¡Mandanos un mensaje!</h1>
+              <h2 class="titulo-secundario">Nos importa tu opinión</h2>
+            </div>
+          </section>
+  
         <!-- form-wrapper: formulario -->
-        <section id="form-wrapper">
-            <form action="#" id="formRegister" method="GET" novalidate>
-                <div class="form-control">
-                    <label>Nombre</label>
-                    <input type="text" required name="firstname" id="firstname">
-                </div>
-                <div class="error" id="error-firstname"></div>
-                <div class="form-control">
-                    <label>Apellido</label>
-                    <input type="text" required name="lastname" id="lastname">
-                </div>
-                <div class="error" id="error-lastname"></div>
-                <div class="form-control">
-                    <label>Email</label>
-                    <input type="email" required name="email" id="email">
-                </div>
-                <div class="error" id="error-email"></div>
-               
-             
-                <div class="form-terms">
-                    <div class="terms">
-                        <input type="checkbox" id="terms">
-                        <label for="terms">Acepto términos y condiciones</label>
+        <section id="form-wrapper" class="formulario-container">
+            
+            
+                <h2>Contáctanos</h2>    
+                <form action="#" method="post" class="formulario">
+                    <div class="campo-nombre-completo">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" required name="firstname" id="firstname">
+                        </div>
+                        <div class="campo">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" required name="lastname" id="lastname">
+                        </div>
                     </div>
-                </div>
-                <button type="submit">Registrarse</button>
-                <div class="form-help">
-                    <a href="#">Necesitas ayuda?</a>
-                </div>
-            </form>
+                    
+                    <div class="campo hola">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" required name="email" id="email">
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="campo">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                    </div>
+                    <a href="../index.html"></a><button type="submit" class="btn-cac">Enviar</button></a>
+                </form>
+            
+
+           
         </section>
 
     </main>
     
     <!-- Pie de página -->
     <footer id="footer">
-        <a href="">Términos y condiciones</a>
-        <a href="">Nosotros</a>
+
+        <div class="contacto contacto-sucursal">
+            <p>Télefono: 1183738212</p>
+            <p>Email: LaEstancia@gmail.com.ar</p>
+        </div>
+        <div class="caja-flexible">
+            <div class="contacto contacto-individual">
+                <p>Contacto</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/camilachoquemamani/">Camila Choque</a></li>
+                    <li><a href="https://www.linkedin.com/in/bono-ezequiel-neer-900a85258/">Bono Neer</a></li>
+                </ul>
+            </div>
+            <div class="navegadores">
+                <p>Navegaciones</p>
+                <ul>
+                    <li><a href="./templates/pizzas.html">Menú</a></li>
+                    <li><a href="./templates/pedidos.html">Pedidos</a></li>
+                    <li><a href="./templates/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        
     </footer>
     
 </body>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- vinculación con estilos y favicon -->
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/index.css">
     <title>La Estancia - Inicio</title>
     <!-- vinculación con google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,22 +85,27 @@
                     <div class="pizza-item">
                         <a href="./templates/description-pizza.html">
                             <img src="./static/image/comercial/pizza/pizza-fugazzetta.png" alt="" class="pizza-item-img">
-                            
+                            <div class="liston-destacado">
+                                        <span class="liston-destacado-nro">#1</span>
+                            </div>    
                             <div class="pizza-item-detail">
-                                <p class="pizza-item-detail-title">Champiñones</p>
-                                <p class="pizza-item-detail-subtitle">$2000 - Ingredientes</p>
+                                <p class="pizza-item-detail-title">PIZZA FUGAZZETA</p>
+                                <a href="./templates/pizzas.html#muzzarella"><button class="btn-cac">Me interesa</button></a>
                             </div> 
                         </a>
+                        
                     </div>
 
                     <!-- pizza 02 -->
                     <div class="pizza-item">
                         <a href="./templates/description-pizza.html">
                             <img src="./static/image/comercial/pizza/pizza-jamon.png" alt="" class="pizza-item-img">
-                            
+                            <div class="liston-destacado">
+                                <span class="liston-destacado-nro">#2</span>
+                            </div>  
                             <div class="pizza-item-detail">
-                                <p class="pizza-item-detail-title">Champiñones</p>
-                                <p class="pizza-item-detail-subtitle">$2000 - Ingredientes</p>
+                                <p class="pizza-item-detail-title">PIZZA DE JAMÓN</p>
+                                <a href="./templates/pizzas.html#muzzarella"><button class="btn-cac">Me interesa</button></a>
                             </div>
                         </a>
                     </div>
@@ -108,10 +114,12 @@
                     <div class="pizza-item">
                         <a href="./templates/description-pizza.html">
                             <img src="./static/image/comercial/pizza/pizza-muzzarella.png" alt="" class="pizza-item-img">
-                            
+                            <div class="liston-destacado">
+                                <span class="liston-destacado-nro">#3</span>
+                            </div>  
                             <div class="pizza-item-detail">
-                                <p class="pizza-item-detail-title">Champiñones</p>
-                                <p class="pizza-item-detail-subtitle">$2000 - Ingredientes</p>
+                                <p class="pizza-item-detail-title">PIZZA MUZARELLA</p>
+                                <a href="./templates/pizzas.html#muzzarella"><button class="btn-cac">Me interesa</button></a>
                             </div> 
                         </a>
                     </div>
@@ -145,11 +153,12 @@
                         <a href="./templates/description-pizza.html">
                             <img src="./static/image/comercial/pizza/pizza-napolitana.png" alt="" class="pizza-item-img">
                             
-                            <div class="pizza-item-detail">
-                                <p class="pizza-item-detail-title">Champiñones</p>
-                                <p class="pizza-item-detail-subtitle">$2000 - Ingredientes</p>
+                            <div class="pizza-item-detail promo">
+                                <p class="pizza-item-detail-title">PIZZA NAPOLITANA</p>
+                                <a href="./templates/pizzas.html#napolitana"><button class="btn-cac">20% Descuento</button></a>
                             </div>
                         </a>
+                        
                     </div>
 
                     <!-- pizza 05 -->
@@ -157,9 +166,9 @@
                         <a href="./templates/description-pizza.html">
                             <img src="./static/image/comercial/pizza/pizza-jamonmorron.png" alt="" class="pizza-item-img">
                             
-                            <div class="pizza-item-detail">
-                                <p class="pizza-item-detail-title">Champiñones</p>
-                                <p class="pizza-item-detail-subtitle">$2000 - Ingredientes</p>
+                            <div class="pizza-item-detail promo">
+                                <p class="pizza-item-detail-title">PIZZA JAMÓN y MORRÓN</p>
+                                <a href="./templates/pizzas.html#jamonmorron"><button class="btn-cac">2 x 1</button></a>
                             </div> 
                         </a>
                     </div>
@@ -169,9 +178,9 @@
                         <a href="./templates/description-pizza.html">
                             <img src="./static/image/comercial/pizza/pizza-pepperoni.png" alt="" class="pizza-item-img">
                             
-                            <div class="pizza-item-detail">
-                                <p class="pizza-item-detail-title">Champiñones</p>
-                                <p class="pizza-item-detail-subtitle">$2000 - Ingredientes</p>
+                            <div class="pizza-item-detail promo">
+                                <p class="pizza-item-detail-title">PIZZA PEPPERONI</p>
+                                <a href="./templates/pizzas.html#pepperoni"><button class="btn-cac">25% Descuento</button></a>
                             </div>
                         </a>
                     </div>
@@ -193,98 +202,54 @@
                 <div class="container">
                 
                     <h2>Reseñas</h2>
-                    <!-- Div para mostrar todas las imagenes e info 
-                        de las pizzas -->
-                    <div id="list-top-rated" class="pizzas-scroller">
+                    <!-- Div para mostrar todas las reseñas de los clientes-->
+                    <div id="list-top-rated" class="comentarios-scroller">
                     
-                        <!-- Info de las pizzas mismo formato para todas -->
-                        <!-- pizza 01 -->
-                        <div class="pizza-item-v2" >
+                        <!-- persona 01 -->
+                        <div class="comentario-cliente" >
                             <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
+                                <img src="./static//image/comentario/persona1.jpg" alt="" class="persona-item-img-v2">
                             </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
+                            <div class="comentario-cliente-detalle">
+                                <p class="comentario-cliente-detalle-nombre">Juan Peréz</p>
+                                <p class="comentario-cliente-detalle-desc">"La entrega fue muy rápida, estoy muy satisfecho con el servicio. ¡Gracias!</p>
                             </div>
                         </div>
 
-                        <!-- pizza 02 -->
-                        <div class="pizza-item-v2" >
+                        <!-- persona 02 -->
+                        <div class="comentario-cliente" >
                             <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
+                                <img src="./static/image/comentario/persona3.jpg" alt="" class="persona-item-img-v2">
                             </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
+                            <div class="comentario-cliente-detalle">
+                                <p class="comentario-cliente-detalle-nombre">María Lopez</p>
+                                <p class="comentario-cliente-detalle-desc">"La pizza llegó en menos de 30 minutos y estaba perfectamente cocinada. Definitivamente volveré a pedir con ustedes. ¡Gran servicio!"</p>
                             </div>
                         </div>
 
-                        <!-- pizza 02 -->
-                        <div class="pizza-item-v2" >
+                        <!-- persona 03 -->
+                        <div class="comentario-cliente" >
                             <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
+                                <img src="./static/image/comentario/persona2.jpg" alt="" class="persona-item-img-v2">
                             </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
+                            <div class="comentario-cliente-detalle">
+                                <p class="comentario-cliente-detalle-nombre">Ana Martínez</p>
+                                <p class="comentario-cliente-detalle-desc">"Trabajadores muy amables y la pizza siempre deliciosa. Excelente trabajo del equipo de entrega"</p>
                             </div>
                         </div>
 
-
-                        <div class="pizza-item-v2" >
+                        <!-- persona 04 -->
+                        <div class="comentario-cliente" >
                             <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
+                                <img src="./static/image/comentario/persona4.jpg" alt="" class="persona-item-img-v2">
                             </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
+                            <div class="comentario-cliente-detalle">
+                                <p class="comentario-cliente-detalle-nombre">Laura García</p>
+                                <p class="comentario-cliente-detalle-desc">"Gran ambiente en cada sucursal que visites. Cinco estrellas. ¡Sigan así!"</p>
                             </div>
                         </div>
 
-                        <!-- pizza 03 -->
-                        <div class="pizza-item-v2" >
-                            <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
-                            </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
-                            </div>
-                        </div>
-
-
-                        <div class="pizza-item-v2" >
-                            <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
-                            </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
-                            </div>
-                        </div>
-
-                        <!-- pizza 04 -->
-                        <div class="pizza-item-v2" >
-                            <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
-                            </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
-                            </div>
-                        </div>
-
-
-                        <div class="pizza-item-v2" >
-                            <div class="wrapper">
-                                <img src="./static//image/comercial//pizza/pizza-hawaiana.png" alt="" class="pizza-item-img-v2">
-                            </div>
-                            <div class="pizza-item-detail-v2">
-                                <p class="pizza-item-detail-title-v2">Hawaiana</p>
-                                <p class="pizza-item-detail-subtitle-v2">2x1 - $1000</p>
-                            </div>
-                        </div>
+                      
 
 
 
@@ -299,8 +264,29 @@
     </main>
 
     <footer id="footer">
-        <a href="">Términos y condiciones</a>
-        <a href="">Nosotros</a>
+
+        <div class="contacto contacto-sucursal">
+            <p>Télefono: 1183738212</p>
+            <p>Email: LaEstancia@gmail.com.ar</p>
+        </div>
+        <div class="caja-flexible">
+            <div class="contacto contacto-individual">
+                <p>Contacto</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/camilachoquemamani/">Camila Choque</a></li>
+                    <li><a href="https://www.linkedin.com/in/bono-ezequiel-neer-900a85258/">Bono Neer</a></li>
+                </ul>
+            </div>
+            <div class="navegadores">
+                <p>Navegaciones</p>
+                <ul>
+                    <li><a href="./templates/pizzas.html">Menú</a></li>
+                    <li><a href="./templates/pedidos.html">Pedidos</a></li>
+                    <li><a href="./templates/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        
     </footer>
 
 </body>
