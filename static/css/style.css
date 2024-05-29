@@ -25,10 +25,6 @@ body{
     font-weight: bold;
 }
 
-
-
-
-
 .nav-links a{
     text-decoration: none;
     color:var(--primary-color);
@@ -61,7 +57,6 @@ body{
 }
 
 .btn-cac{
-    /*background-color: var(--primary-color);*/
     border: 2px solid var(--secondary-color);
     padding: 10px 20px;
     border-radius: 10px;
@@ -69,8 +64,6 @@ body{
     font-weight: bold;
     transition: all .5s;
 }
-
-
 
 #logo a{
     
@@ -81,8 +74,6 @@ body{
     font-size: 28px;
     padding: 10px;
 }
-
-
 
 #footer a {
     color: white;
@@ -96,7 +87,6 @@ body{
     text-decoration: underline;
     color:var(--secondary-color);
 }
-
 
 #footer {
     align-items: center;
@@ -112,7 +102,6 @@ footer .contacto-sucursal{
     justify-content: space-around;
 }
 
-
 footer .caja-flexible{
     display: flex;
     justify-content: space-around;
@@ -124,7 +113,6 @@ footer .contacto ul, footer .navegadores ul{
     margin-right: 15px;
     margin-top: 10px;
 }
-
 
 footer .contacto-individual, footer .navegadores{
     display: flex;
@@ -141,15 +129,11 @@ footer .contacto-individual p, footer .navegadores p{
     color: black;
 }
 
-
 /* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-   
-   
     .logo-text{
         display: none;
     }
-
         
     #footer {
         flex-direction: column;
@@ -165,7 +149,6 @@ footer .contacto-individual p, footer .navegadores p{
     .logo-text{
         display: none;
     }
-
 
     .btn-cac{
         font-size: 1vh;
@@ -195,7 +178,6 @@ nav{
     list-style: none;
 }
 
-
 /* width */
  ::-webkit-scrollbar {
     width: 10px;
@@ -216,3 +198,28 @@ nav{
     background:#E98158; 
 }
 
+.car {
+    color: #FFF;
+    transition: all .5s;
+}
+
+.car:hover {
+    color: var(--primary-color);
+    transition: all .5s;
+}
+
+.boton-compra {
+    background-color: #C85043;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all .5s;
+    border: none;
+}
+
+.boton-compra:hover{
+    color:#F9F1E6 !important;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
