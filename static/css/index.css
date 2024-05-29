@@ -1,0 +1,333 @@
+
+h2{
+    color:#F9F1E6;
+    font-family: 'Poetsen One';
+    background-color: #f97250;
+}
+
+section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pizza-item-img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover; 
+    object-fit: cover;
+} 
+
+#banner{
+    background-image: url('../image/publicidad/publicidad.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Alinea al centro el botón de registrarse */
+.card-banner{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 160px;
+}
+.card-banner h1{
+    margin: 50px;
+    font-family: 'Playfair';
+    color:#FFF;
+    font-size: 4vw;
+}
+
+
+
+
+
+#top-rated{
+    margin: 50px 0px;
+}
+
+/* Se agrega un scroll */
+.comentarios-scroller{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:0px 0px 20px 0px;
+    
+}
+
+.comentario-cliente{
+    border-radius: 20px;
+    padding: 10px;
+    /*min-width: 170px;*/
+    min-width: 300px;
+    font-size: 20px;
+    margin-left: 30px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    background-color: white;
+    color: #B7AB9C;
+    
+    
+}
+
+
+.wrapper {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    align-self: flex-start;
+    
+    
+}
+
+.persona-item-img-v2 {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+
+.comentario-cliente-detalle {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 200px;
+    display: block;
+    margin-left: 10px;
+}
+
+.comentario-cliente-detalle-nombre {
+    
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+
+.comentario-cliente-detalle-desc {
+    
+    font-size: 12px;
+    margin: 3px 0px;
+}
+
+
+
+
+
+.card-banner h2, .container h2{
+    margin-bottom: 20px;
+}
+
+
+
+#popular h2,#top-rated h2, #promos h2,#resenias h2 {
+    text-align: center;
+}
+
+#popular h2,#top-rated h2{
+    margin: 30px 0px;
+}
+
+.pizza-item{
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    max-width: 35vh;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    margin: 0 1vw 2vw 1vw;
+    box-shadow: 0px 0px 25px 0px #dfd7cb;
+    position: relative;
+}
+.liston-destacado {
+    position: absolute;
+    
+    bottom: 0;
+    right: 0;
+    width: 0;
+     height: 0;
+     border-right: 50px solid transparent;
+     border-top: 50px solid transparent;
+     border-left: 50px solid #B55547;
+     border-bottom: 50px solid #B55547;
+     transform: rotate(270deg);
+     color: white;
+     
+}
+
+.liston-destacado-nro{
+    position: absolute;
+    top: 8px;
+    left: -30px;
+    text-align: center;
+    transform: rotate(90deg); 
+    color: white;
+    font-size: 27px; 
+    font-weight: bold;
+ 
+}
+
+
+.pizza-item:hover{
+    opacity: 0.9;
+}
+
+.pizza-item:hover {
+    bottom: 0;
+} 
+ 
+.pizza-item-detail a button{
+    background-color: transparent;
+    font-size: 15px;
+    margin: 20px 10px;
+    color: #E48067;
+}
+.promo a button{
+    background-color: #C55340;
+    font-size: 15px;
+    margin: 20px 10px;
+    color: white;
+    border: none;
+}
+.pizza-item-detail-title{
+    color: #C85043;
+    font-weight: bold;
+}
+
+
+
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h2{
+        font-size: 3vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 400px;
+    }
+    #search{
+        height: 200px;
+    }
+    .container{
+        max-width: 720px;
+    }
+    .card-banner{
+        padding: 0px 75px;
+    }
+        
+}
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 3vw;
+    }
+
+    .h2-subtitle{
+        font-size: 5vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 300px;
+    }
+   
+    .container{
+        max-width: 420px;
+    }
+    .card-banner{
+        padding: 0px 50px;
+    }
+
+    .btn-cac{
+        font-size: 1vh;
+    }
+   
+}
+
+
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+.pizza-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 20px;
+} 
+
+
+.d-form{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.titulos {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+    color: #FFF;
+}
+
+.titulo-principal {
+    font-family: 'Playfair';
+    font-size: 7vh;
+    color: #FFF;
+    margin-bottom: 3vh;
+}
+
+.titulo-secundario{
+    font-family: 'Bebas Neue';
+    font-size: 3vh;
+}
+
+.car {
+    color: #FFF;
+    transition: all .5s;
+}
+
+.car:hover {
+    color: var(--primary-color);
+    transition: all .5s;
+}
+

@@ -48,16 +48,20 @@
    </header>
     
     <!--Contenido Principal-->
-    <main class="contenedor-opciones">
+    <main>
       <!--Titulos del Sitio-->
-      <section id="banner" class="titulos">
-        <h1 class="titulo-principal">Menú</h1>
-        <h2 class="titulo-secundario">¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car" href="./pedidos.html">pedido</a>.</h2>
-        <p>*<i>Todas las pizzas se venden en tamaños medianos y grandes</i></p>
+      <section id="banner-menu" class="d-flex">
+        <div class="card-banner container">
+          <h1 class="titulo-principal">Menú</h1>
+          <h2 class="titulo-secundario">¡Una buena variedad de pizzas para todos los gustos! Elegí las que más te gusten y agregalas a tu <a class="car" href="./pedidos.html">pedido</a></h2>
+          <p>*<i>Todas las pizzas se venden en tamaños medianos y grandes</i></p>
+        </div>
       </section>
 
+    
       <!--Contenido Pizzas-->
-      <section class="contenedor-pizzas">
+      <div class="contenedor-opciones">
+        <section class="contenedor-pizzas">
           <!--Pizza Muzzarella-->
           <div id="muzzarella" class="carta-pizza">
             <div class="descripcion-gral">
@@ -214,6 +218,8 @@
             </div>
           </div>
       </section>
+      </div>
+     
 
       <div id="notificacion" class="notificacion mostrar">
         <div id="descripcionContenedor" class="descripcion-gral">
@@ -225,9 +231,30 @@
 
     <!--Footer-->
     <footer id="footer">
-      <a href="#">Términos y condiciones</a>
-      <a href="#">Nosotros</a>
-    </footer>
+
+      <div class="contacto contacto-sucursal">
+          <p>Télefono: 1183738212</p>
+          <p>Email: LaEstancia@gmail.com.ar</p>
+      </div>
+      <div class="caja-flexible">
+          <div class="contacto contacto-individual">
+              <p>Contacto</p>
+              <ul>
+                  <li><a href="https://www.linkedin.com/in/camilachoquemamani/">Camila Choque</a></li>
+                  <li><a href="https://www.linkedin.com/in/bono-ezequiel-neer-900a85258/">Bono Neer</a></li>
+              </ul>
+          </div>
+          <div class="navegadores">
+              <p>Navegaciones</p>
+              <ul>
+                  <li><a href="./templates/pizzas.html">Menú</a></li>
+                  <li><a href="./templates/pedidos.html">Pedidos</a></li>
+                  <li><a href="./templates/contacto.html">Contacto</a></li>
+              </ul>
+          </div>
+      </div>
+      
+  </footer>
 
     <!--Vinculación con JavaScript-->
     <script src="../static/scripts/pizzas.js"></script>
