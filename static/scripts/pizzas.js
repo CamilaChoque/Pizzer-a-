@@ -61,11 +61,11 @@ function mostrarNotificacion(tamaño, nombrePizza, precioPizza) {
     /* En el caso en el que el ancho de la pantalla sea menor o igual a 540px, no se añaden algunos datos, para mejorar la visualización de la página en
     dispositivos móviles.*/ 
     if(window.innerWidth > 540) {
-        espacioImagen.appendChild(imagen);
+        informacion.appendChild(datosNombre);
+        informacion.appendChild(datosTamaño);
+        informacion.appendChild(datosPrecio);
     }
-    informacion.appendChild(datosNombre);
-    informacion.appendChild(datosTamaño);
-    informacion.appendChild(datosPrecio);
+    espacioImagen.appendChild(imagen);
 
     notificacion.classList.toggle('mostrar');
     
