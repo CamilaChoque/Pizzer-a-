@@ -11,5 +11,7 @@ router.get('/', (req, res) => {
 
 //crear productos
 router.post("/crear",authAdmin,validatePizza,pizzaController.createPizza);
+router.put("/actualizar/:id",authAdmin,validatePizza,pizzaController.updatePizza)
+router.delete("/eliminar/:id",authAdmin,validatePizza,pizzaController.deletePizza)
 
 module.exports = router;
