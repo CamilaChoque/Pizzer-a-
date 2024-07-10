@@ -1,6 +1,16 @@
 
 const db = require("../db/db.js");
 
+const getPizzas = (req, res) => {
+    const sql = "SELECT productName,price,ingredients,description,state FROM products";
+    db.query(sql, (err, results) => {
+      if (err) {
+        throw err;
+      }
+      res.json(results);
+    });
+};
+
 const createPizza = (req, res)=>{
     
     const {name, price, ingredients,description,img,state} = req.body;
@@ -52,9 +62,12 @@ const deletePizza = (req, res) => {
     });
 }
 
+
+
 //exportacion de modulos
 module.exports = {
     createPizza,
     deletePizza,
-    updatePizza
+    updatePizza,
+    getPizzas
 }
